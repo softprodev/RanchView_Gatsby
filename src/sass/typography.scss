@@ -1,0 +1,52 @@
+body {
+  @apply font-body text-base font-normal text-typography-body antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-one,
+.heading-two,
+.heading-three,
+.heading-four,
+.heading-five,
+.heading-six {
+  @apply font-extrabold text-typography-heading font-heading;
+}
+
+h1,
+.heading-one {
+  @apply mb-6 text-mobile-6xl md:text-6xl;
+}
+
+h2,
+.heading-two {
+  @apply mb-6 text-mobile-5xl md:text-5xl;
+}
+
+h3,
+.heading-three {
+  @apply mb-5 text-mobile-4xl md:text-4xl;
+}
+
+h4,
+.heading-four {
+  @apply mb-4 text-3xl;
+}
+
+h5,
+.heading-five {
+  @apply mb-3 text-xl;
+}
+
+h6,
+.heading-six {
+  @apply mb-3 text-lg;
+}
+
+p {
+  @apply mb-6;
+}

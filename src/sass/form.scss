@@ -1,0 +1,29 @@
+.radio-custom {
+  @apply before:absolute before:top-2 before:left-2 before:z-10 before:h-2 before:w-2 before:rounded-full before:bg-transparent before:transition-colors before:duration-300 before:ease-linear
+  after:absolute after:top-0 after:left-0 after:h-6 after:w-6 after:rounded-full after:border after:border-gray-200 after:bg-white after:transition-colors after:duration-300 after:ease-linear;
+}
+input[type="radio"] {
+  @apply absolute opacity-0;
+  &:checked {
+    + .radio-custom {
+      @apply after:border-primary-500 before:bg-white after:bg-primary-500;
+    }
+  }
+}
+
+.checkbox-custom {
+  &:before {
+    content: "\f00c" !important;
+    font-family: "Font Awesome 5 Pro";
+  }
+  @apply before:absolute before:top-0 before:left-1.5 before:z-10 before:bg-transparent before:text-base before:font-bold before:text-transparent before:transition-colors before:duration-300 before:ease-linear
+  after:absolute after:top-0 after:left-0 after:h-6 after:w-6 after:border after:border-gray-200 after:bg-white after:transition-colors after:duration-300 after:ease-linear;
+}
+input[type="checkbox"] {
+  @apply absolute opacity-0;
+  &:checked {
+    ~ .checkbox-custom {
+      @apply after:border-primary-500 before:text-white after:bg-primary-500;
+    }
+  }
+}

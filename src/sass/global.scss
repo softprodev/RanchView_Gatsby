@@ -1,0 +1,30 @@
+.tl-edges {
+  overflow-x: initial !important;
+}
+
+html,
+body {
+  @apply overflow-x-hidden md:overflow-x-visible;
+}
+
+a,
+button {
+  @apply font-bold text-primary-500 underline outline-none transition-all duration-300 ease-linear hover:text-primary-500;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.styled-list-checkmark {
+  @apply mb-8 space-y-2.5;
+  li {
+    @apply flex items-baseline;
+    &:before {
+      content: "\f00c";
+      font-family: "Font Awesome 5 Pro";
+      @apply mr-2 text-lg font-bold text-primary-500;
+    }
+  }
+}
